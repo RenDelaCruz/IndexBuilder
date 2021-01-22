@@ -42,3 +42,13 @@ def delete_entry(term, catalogue):
         print('Unknown entry.\n')
 
     return catalogue
+
+def save_index(inp, catalogue):
+    if len(inp) == 0:
+        inp = 'Index'
+
+    filename = inp + '.txt'
+    with open(filename, 'w') as f:
+        print(catalogue.print_textfile_format(), file=f)
+
+    print('Saved index as {}.\n'.format(filename))

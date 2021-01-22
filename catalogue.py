@@ -1,5 +1,6 @@
 from entry import Entry
 
+# Acts as a dictionary of term entries
 class Catalogue:
 
     def __init__(self):
@@ -44,6 +45,19 @@ class Catalogue:
     def _get_letter_list(self, term):
         first_letter = term[0].upper()
         return self._index_dict[first_letter]
+
+    def print_textfile_format(self):
+        formatted = 'Index'
+
+        for letter in sorted(self._index_dict):
+            formatted += '\n\n{}'.format(letter)
+
+            for entry in sorted(self._index_dict[letter]):
+                formatted += '\n{}'.format(entry.get_term())
+                for page in entry.get_pages():
+                    formatted += ', {}'.format(page)
+    
+        return formatted + '\n'
 
     def __contains__(self, term):
         for entries in self._index_dict.values():

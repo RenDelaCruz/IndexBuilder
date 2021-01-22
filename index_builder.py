@@ -21,14 +21,18 @@ def main():
             if inp == '/help':
                 pass
             elif inp.startswith('/delete'):
-                 inp = inp.split("/delete ", 1)[1]
-                 catalogue = delete_entry(inp, catalogue)
+                inp = inp.split("/delete ", 1)[1]
+                catalogue = delete_entry(inp, catalogue)
 
             elif inp == '/check':
                 print(catalogue)
                 
-            elif inp == '/save':
-                pass
+            elif inp.startswith('/save'):
+                if inp == '/save':
+                    print('Invalid. Expected syntax: /save <filename>\n')
+                else:
+                    inp = inp.split("/save ", 1)[1]
+                    save_index(inp, catalogue)
         else:
             catalogue = insert_entry(inp, catalogue)
 
