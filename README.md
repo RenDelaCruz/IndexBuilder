@@ -40,5 +40,4 @@ ______________________________
 
 TODO
 
-- Add text file saving feature
 - Add subentries
