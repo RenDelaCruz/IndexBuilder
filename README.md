@@ -16,7 +16,7 @@ Run `index_builder.py` to start.
 Simply enter a term and the corresponding pages, or page ranges, separated by commas. Entering the same term will update the entry with the additional pages. To enter 'apple' found on pages 1, 3 and 6-12, type in `apple, 1, 3, 6-12`. All of the term entries are automatically ordered alphabetically, and the pages numerically.
 
 
-Example index:
+Example:
 
 ```
 ______________________________
